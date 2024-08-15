@@ -1,0 +1,323 @@
+﻿tahun;garis_kemiskinan;bps_nama_kabupaten_kota
+2023;538693;Kabupaten Simeulue
+2023;568691;Kabupaten Aceh Singkil
+2023;494565;Kabupaten Aceh Selatan
+2023;471301;Kabupaten Aceh Tenggara
+2023;530934;Kabupaten Aceh Timur
+2023;584863;Kabupaten Aceh Tengah
+2023;616091;Kabupaten Aceh Barat
+2023;564431;Kabupaten Aceh Besar
+2023;579450;Kabupaten Pidie
+2023;486667;Kabupaten Bireuen
+2023;454361;Kabupaten Aceh Utara
+2023;474127;Kabupaten Aceh Barat Daya
+2023;514836;Kabupaten Gayo Lues
+2023;555387;Kabupaten Aceh Tamiang
+2023;594374;Kabupaten Nagan Raya
+2023;515244;Kabupaten Aceh Jaya
+2023;551868;Kabupaten Bener Meriah
+2023;572452;Kabupaten Pidie Jaya
+2023;814530;Kota Banda Aceh
+2023;715446;Kota Sabang
+2023;512319;Kota Langsa
+2023;498431;Kota Lhokseumawe
+2023;487777;Kota Subulussalam
+2022;493303;Kabupaten Simeulue
+2022;518951;Kabupaten Aceh Singkil
+2022;446224;Kabupaten Aceh Selatan
+2022;430825;Kabupaten Aceh Tenggara
+2022;491550;Kabupaten Aceh Timur
+2022;533810;Kabupaten Aceh Tengah
+2022;558638;Kabupaten Aceh Barat
+2022;519320;Kabupaten Aceh Besar
+2022;535713;Kabupaten Pidie
+2022;451163;Kabupaten Bireuen
+2022;420615;Kabupaten Aceh Utara
+2022;430297;Kabupaten Aceh Barat Daya
+2022;470221;Kabupaten Gayo Lues
+2022;508599;Kabupaten Aceh Tamiang
+2022;544300;Kabupaten Nagan Raya
+2022;468854;Kabupaten Aceh Jaya
+2022;512111;Kabupaten Bener Meriah
+2022;523239;Kabupaten Pidie Jaya
+2022;737016;Kota Banda Aceh
+2022;660573;Kota Sabang
+2022;469348;Kota Langsa
+2022;460583;Kota Lhokseumawe
+2022;444818;Kota Subulussalam
+2021;458896;Kabupaten Simeulue
+2021;487249;Kabupaten Aceh Singkil
+2021;418689;Kabupaten Aceh Selatan
+2021;404725;Kabupaten Aceh Tenggara
+2021;460422;Kabupaten Aceh Timur
+2021;505933;Kabupaten Aceh Tengah
+2021;533712;Kabupaten Aceh Barat
+2021;489498;Kabupaten Aceh Besar
+2021;504452;Kabupaten Pidie
+2021;422685;Kabupaten Bireuen
+2021;392412;Kabupaten Aceh Utara
+2021;406157;Kabupaten Aceh Barat Daya
+2021;438689;Kabupaten Gayo Lues
+2021;479801;Kabupaten Aceh Tamiang
+2021;508801;Kabupaten Nagan Raya
+2021;441706;Kabupaten Aceh Jaya
+2021;476074;Kabupaten Bener Meriah
+2021;495254;Kabupaten Pidie Jaya
+2021;698617;Kota Banda Aceh
+2021;620373;Kota Sabang
+2021;435438;Kota Langsa
+2021;427045;Kota Lhokseumawe
+2021;418643;Kota Subulussalam
+2020;444754;Kabupaten Simeulue
+2020;473983;Kabupaten Aceh Singkil
+2020;405786;Kabupaten Aceh Selatan
+2020;392493;Kabupaten Aceh Tenggara
+2020;440455;Kabupaten Aceh Timur
+2020;492227;Kabupaten Aceh Tengah
+2020;517264;Kabupaten Aceh Barat
+2020;477938;Kabupaten Aceh Besar
+2020;493145;Kabupaten Pidie
+2020;410203;Kabupaten Bireuen
+2020;375394;Kabupaten Aceh Utara
+2020;393640;Kabupaten Aceh Barat Daya
+2020;425529;Kabupaten Gayo Lues
+2020;459387;Kabupaten Aceh Tamiang
+2020;493121;Kabupaten Nagan Raya
+2020;428094;Kabupaten Aceh Jaya
+2020;457916;Kabupaten Bener Meriah
+2020;481308;Kabupaten Pidie Jaya
+2020;674977;Kota Banda Aceh
+2020;599381;Kota Sabang
+2020;407421;Kota Langsa
+2020;401158;Kota Lhokseumawe
+2020;400517;Kota Subulussalam
+2019;404739;Kabupaten Simeulue
+2019;450217;Kabupaten Aceh Singkil
+2019;369107;Kabupaten Aceh Selatan
+2019;357015;Kabupaten Aceh Tenggara
+2019;417715;Kabupaten Aceh Timur
+2019;468577;Kabupaten Aceh Tengah
+2019;471058;Kabupaten Aceh Barat
+2019;447563;Kabupaten Aceh Besar
+2019;462059;Kabupaten Pidie
+2019;393198;Kabupaten Bireuen
+2019;353856;Kabupaten Aceh Utara
+2019;358059;Kabupaten Aceh Barat Daya
+2019;387893;Kabupaten Gayo Lues
+2019;437991;Kabupaten Aceh Tamiang
+2019;446144;Kabupaten Nagan Raya
+2019;391677;Kabupaten Aceh Jaya
+2019;431643;Kabupaten Bener Meriah
+2019;455995;Kabupaten Pidie Jaya
+2019;628493;Kota Banda Aceh
+2019;563100;Kota Sabang
+2019;380906;Kota Langsa
+2019;376832;Kota Lhokseumawe
+2019;351093;Kota Subulussalam
+2018;368068;Kabupaten Simeulue
+2018;427804;Kabupaten Aceh Singkil
+2018;351288;Kabupaten Aceh Selatan
+2018;340196;Kabupaten Aceh Tenggara
+2018;398493;Kabupaten Aceh Timur
+2018;445250;Kabupaten Aceh Tengah
+2018;447089;Kabupaten Aceh Barat
+2018;422051;Kabupaten Aceh Besar
+2018;435873;Kabupaten Pidie
+2018;358399;Kabupaten Bireuen
+2018;340086;Kabupaten Aceh Utara
+2018;340903;Kabupaten Aceh Barat Daya
+2018;368583;Kabupaten Gayo Lues
+2018;420841;Kabupaten Aceh Tamiang
+2018;426827;Kabupaten Nagan Raya
+2018;373690;Kabupaten Aceh Jaya
+2018;413208;Kabupaten Bener Meriah
+2018;448201;Kabupaten Pidie Jaya
+2018;607391;Kota Banda Aceh
+2018;552272;Kota Sabang
+2018;371267;Kota Langsa
+2018;367525;Kota Lhokseumawe
+2018;315453;Kota Subulussalam
+2017;350622;Kabupaten Simeulue
+2017;406015;Kabupaten Aceh Singkil
+2017;332177;Kabupaten Aceh Selatan
+2017;250854;Kabupaten Aceh Tenggara
+2017;369911;Kabupaten Aceh Timur
+2017;427170;Kabupaten Aceh Tengah
+2017;446614;Kabupaten Aceh Barat
+2017;398752;Kabupaten Aceh Besar
+2017;408150;Kabupaten Pidie
+2017;335314;Kabupaten Bireuen
+2017;318729;Kabupaten Aceh Utara
+2017;329543;Kabupaten Aceh Barat Daya
+2017;329543;Kabupaten Gayo Lues
+2017;389459;Kabupaten Aceh Tamiang
+2017;400811;Kabupaten Nagan Raya
+2017;356060;Kabupaten Aceh Jaya
+2017;383289;Kabupaten Bener Meriah
+2017;429966;Kabupaten Pidie Jaya
+2017;572295;Kota Banda Aceh
+2017;523705;Kota Sabang
+2017;347056;Kota Langsa
+2017;343558;Kota Lhokseumawe
+2017;273370;Kota Subulussalam
+2016;326563;Kabupaten Simeulue
+2016;368968;Kabupaten Aceh Singkil
+2016;304466;Kabupaten Aceh Selatan
+2016;221799;Kabupaten Aceh Tenggara
+2016;350186;Kabupaten Aceh Timur
+2016;397859;Kabupaten Aceh Tengah
+2016;441909;Kabupaten Aceh Barat
+2016;384545;Kabupaten Aceh Besar
+2016;393370;Kabupaten Pidie
+2016;317562;Kabupaten Bireuen
+2016;301733;Kabupaten Aceh Utara
+2016;306930;Kabupaten Aceh Barat Daya
+2016;301546;Kabupaten Gayo Lues
+2016;368691;Kabupaten Aceh Tamiang
+2016;374236;Kabupaten Nagan Raya
+2016;331940;Kabupaten Aceh Jaya
+2016;363796;Kabupaten Bener Meriah
+2016;399377;Kabupaten Pidie Jaya
+2016;541732;Kota Banda Aceh
+2016;492787;Kota Sabang
+2016;323246;Kota Langsa
+2016;319988;Kota Lhokseumawe
+2016;250408;Kota Subulussalam
+2015;311351;Kabupaten Simeulue
+2015;351409;Kabupaten Aceh Singkil
+2015;288619;Kabupaten Aceh Selatan
+2015;212025;Kabupaten Aceh Tenggara
+2015;328048;Kabupaten Aceh Timur
+2015;380858;Kabupaten Aceh Tengah
+2015;424227;Kabupaten Aceh Barat
+2015;366676;Kabupaten Aceh Besar
+2015;374031;Kabupaten Pidie
+2015;301027;Kabupaten Bireuen
+2015;280683;Kabupaten Aceh Utara
+2015;292323;Kabupaten Aceh Barat Daya
+2015;286882;Kabupaten Gayo Lues
+2015;343246;Kabupaten Aceh Tamiang
+2015;361359;Kabupaten Nagan Raya
+2015;316304;Kabupaten Aceh Jaya
+2015;338719;Kabupaten Bener Meriah
+2015;380371;Kabupaten Pidie Jaya
+2015;523444;Kota Banda Aceh
+2015;475111;Kota Sabang
+2015;307260;Kota Langsa
+2015;303155;Kota Lhokseumawe
+2015;244628;Kota Subulussalam
+2014;307596;Kabupaten Simeulue
+2014;322413;Kabupaten Aceh Singkil
+2014;285301;Kabupaten Aceh Selatan
+2014;209811;Kabupaten Aceh Tenggara
+2014;322385;Kabupaten Aceh Timur
+2014;374989;Kabupaten Aceh Tengah
+2014;417641;Kabupaten Aceh Barat
+2014;352751;Kabupaten Aceh Besar
+2014;363791;Kabupaten Pidie
+2014;295294;Kabupaten Bireuen
+2014;276137;Kabupaten Aceh Utara
+2014;288713;Kabupaten Aceh Barat Daya
+2014;281178;Kabupaten Gayo Lues
+2014;336767;Kabupaten Aceh Tamiang
+2014;356221;Kabupaten Nagan Raya
+2014;308891;Kabupaten Aceh Jaya
+2014;329550;Kabupaten Bener Meriah
+2014;376795;Kabupaten Pidie Jaya
+2014;500768;Kota Banda Aceh
+2014;457242;Kota Sabang
+2014;301089;Kota Langsa
+2014;297189;Kota Lhokseumawe
+2014;242054;Kota Subulussalam
+2013;305600;Kabupaten Simeulue
+2013;316319;Kabupaten Aceh Singkil
+2013;283446;Kabupaten Aceh Selatan
+2013;206797;Kabupaten Aceh Tenggara
+2013;319392;Kabupaten Aceh Timur
+2013;370670;Kabupaten Aceh Tengah
+2013;413061;Kabupaten Aceh Barat
+2013;352451;Kabupaten Aceh Besar
+2013;361707;Kabupaten Pidie
+2013;292308;Kabupaten Bireuen
+2013;274799;Kabupaten Aceh Utara
+2013;283117;Kabupaten Aceh Barat Daya
+2013;279420;Kabupaten Gayo Lues
+2013;331218;Kabupaten Aceh Tamiang
+2013;353231;Kabupaten Nagan Raya
+2013;303209;Kabupaten Aceh Jaya
+2013;327652;Kabupaten Bener Meriah
+2013;373497;Kabupaten Pidie Jaya
+2013;493558;Kota Banda Aceh
+2013;451218;Kota Sabang
+2013;298749;Kota Langsa
+2013;293788;Kota Lhokseumawe
+2013;241189;Kota Subulussalam
+2012;324723;Kabupaten Simeulue
+2012;330327;Kabupaten Aceh Singkil
+2012;301815;Kabupaten Aceh Selatan
+2012;218621;Kabupaten Aceh Tenggara
+2012;339969;Kabupaten Aceh Timur
+2012;389755;Kabupaten Aceh Tengah
+2012;436074;Kabupaten Aceh Barat
+2012;381872;Kabupaten Aceh Besar
+2012;385166;Kabupaten Pidie
+2012;311183;Kabupaten Bireuen
+2012;294296;Kabupaten Aceh Utara
+2012;297858;Kabupaten Aceh Barat Daya
+2012;298908;Kabupaten Gayo Lues
+2012;348698;Kabupaten Aceh Tamiang
+2012;373873;Kabupaten Nagan Raya
+2012;317816;Kabupaten Aceh Jaya
+2012;348845;Kabupaten Bener Meriah
+2012;396112;Kabupaten Pidie Jaya
+2012;524288;Kota Banda Aceh
+2012;478442;Kota Sabang
+2012;318445;Kota Langsa
+2012;315266;Kota Lhokseumawe
+2012;259680;Kota Subulussalam
+2011;300467;Kabupaten Simeulue
+2011;304414;Kabupaten Aceh Singkil
+2011;278854;Kabupaten Aceh Selatan
+2011;201449;Kabupaten Aceh Tenggara
+2011;312927;Kabupaten Aceh Timur
+2011;360044;Kabupaten Aceh Tengah
+2011;402636;Kabupaten Aceh Barat
+2011;351800;Kabupaten Aceh Besar
+2011;355618;Kabupaten Pidie
+2011;286617;Kabupaten Bireuen
+2011;271150;Kabupaten Aceh Utara
+2011;274089;Kabupaten Aceh Barat Daya
+2011;275000;Kabupaten Gayo Lues
+2011;322629;Kabupaten Aceh Tamiang
+2011;346154;Kabupaten Nagan Raya
+2011;291333;Kabupaten Aceh Jaya
+2011;322853;Kabupaten Bener Meriah
+2011;365477;Kabupaten Pidie Jaya
+2011;477669;Kota Banda Aceh
+2011;438111;Kota Sabang
+2011;293333;Kota Langsa
+2011;290838;Kota Lhokseumawe
+2011;238423;Kota Subulussalam
+2010;278023;Kabupaten Simeulue
+2010;280534;Kabupaten Aceh Singkil
+2010;257640;Kabupaten Aceh Selatan
+2010;185626;Kabupaten Aceh Tenggara
+2010;288036;Kabupaten Aceh Timur
+2010;332598;Kabupaten Aceh Tengah
+2010;371762;Kabupaten Aceh Barat
+2010;324096;Kabupaten Aceh Besar
+2010;328337;Kabupaten Pidie
+2010;263990;Kabupaten Bireuen
+2010;249824;Kabupaten Aceh Utara
+2010;252217;Kabupaten Aceh Barat Daya
+2010;253004;Kabupaten Gayo Lues
+2010;298509;Kabupaten Aceh Tamiang
+2010;320490;Kabupaten Nagan Raya
+2010;267057;Kabupaten Aceh Jaya
+2010;298798;Kabupaten Bener Meriah
+2010;337211;Kabupaten Pidie Jaya
+2010;435195;Kota Banda Aceh
+2010;401180;Kota Sabang
+2010;270201;Kota Langsa
+2010;268303;Kota Lhokseumawe
+2010;218906;Kota Subulussalam
