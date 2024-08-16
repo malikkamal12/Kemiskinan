@@ -48,24 +48,60 @@ if page == "Jumlah Penduduk Miskin":
         </p>
         """, unsafe_allow_html=True)
 
+        # Data preparation for historical data
         data_grouped = data1.groupby('tahun').agg(
             bps_jumlah_penduduk=('bps_jumlah_penduduk', 'sum'),
             persentase_jumlah_penduduk_miskin=('persentase_jumlah_penduduk_miskin', 'mean')
         ).reset_index()
 
-        fig1 = px.line(data_grouped, 
-                       x='tahun', 
-                       y='bps_jumlah_penduduk', 
-                       title='Grafik Jumlah Penduduk Miskin Aceh Berdasarkan Tahun',
-                       labels={'bps_jumlah_penduduk': 'Jumlah Penduduk (Ribu Jiwa)', 'tahun': 'Tahun', 'persentase_jumlah_penduduk_miskin':'Persentase Jumlah Penduduk Miskin (%)'},
-                       height=500,
-                       hover_data={'persentase_jumlah_penduduk_miskin': ':.2f'})
+        # Model training for predictions
+        model_penduduk = LinearRegression()
+        X = data_grouped[['tahun']]
+        y_penduduk = data_grouped['bps_jumlah_penduduk']
+        model_penduduk.fit(X, y_penduduk)
 
-        fig1.update_traces(mode='lines+markers', marker=dict(size=8), line=dict(width=1))
-        fig1.update_layout(title={'x': 0.5, 'xanchor': 'center', 'yanchor': 'top'},
-                           xaxis_title='Tahun',
-                           yaxis_title='Jumlah Penduduk (Ribu Jiwa)')
-        st.plotly_chart(fig1)
+        model_persentase = LinearRegression()
+        y_persentase = data_grouped['persentase_jumlah_penduduk_miskin']
+        model_persentase.fit(X, y_persentase)
+
+        # Prediction for future years
+        tahun_prediksi = pd.DataFrame({'tahun': [2022, 2023, 2024, 2025, 2026]})
+        prediksi_jumlah_penduduk = model_penduduk.predict(tahun_prediksi)
+        prediksi_persentase_miskin = model_persentase.predict(tahun_prediksi)
+
+        prediksi_df = pd.DataFrame({
+            'tahun': tahun_prediksi['tahun'],
+            'bps_jumlah_penduduk': prediksi_jumlah_penduduk,
+            'persentase_jumlah_penduduk_miskin': prediksi_persentase_miskin
+        })
+
+        # Combine historical and prediction data, adding a column to indicate the data type
+        data_grouped['type'] = 'Actual'
+        prediksi_df['type'] = 'Predicted'
+        combined_df = pd.concat([data_grouped, prediksi_df], ignore_index=True)
+
+        # Visualization for both historical and prediction data with color distinction
+        fig = px.line(combined_df, 
+                    x='tahun', 
+                    y='bps_jumlah_penduduk', 
+                    color='type',
+                    title='Grafik Jumlah Penduduk Miskin dan Prediksi di Aceh (Hingga 2026)',
+                    labels={'bps_jumlah_penduduk': 'Jumlah Penduduk (Ribu Jiwa)', 'tahun': 'Tahun', 'type': 'Data Type'},
+                    height=500,
+                    hover_data={'persentase_jumlah_penduduk_miskin': ':.2f'})
+
+        # Update traces to differentiate colors between actual and predicted data
+        fig.update_traces(mode='lines+markers', marker=dict(size=8))
+
+        # Add a vertical line to separate actual and predicted data at 2021.5
+        fig.add_vline(x=2021.5, line_width=2, line_dash='dash', line_color='yellow')
+
+        fig.update_layout(title={'x': 0.5, 'xanchor': 'center', 'yanchor': 'top'},
+                        xaxis_title='Tahun',
+                        yaxis_title='Jumlah Penduduk (Ribu Jiwa)',
+                        xaxis=dict(tickformat='.0f'))
+
+        st.plotly_chart(fig)
 
         st.write("### Jumlah Penduduk Miskin per Kab/Kota Tahun (2012-2021)")
         top_n_option = st.selectbox(
@@ -221,13 +257,34 @@ elif page == "Indeks Kedalaman dan Keparahan Kemiskinan":
         # Fill NaN values resulting from pct_change calculation with 0
         avg_data.fillna(0, inplace=True)
 
-        fig3 = go.Figure()
+        # Train linear regression models for both indices
+        X = avg_data['tahun'].values.reshape(-1, 1)
+        model_depth = LinearRegression().fit(X, avg_data['indeks_kedalaman'])
+        model_severity = LinearRegression().fit(X, avg_data['indeks_keparahan_kemiskinan'])
 
-        # Add poverty depth index line
-        fig3.add_trace(go.Scatter(
+        # Predict future years (2024-2028)
+        future_years = np.array([2024, 2025, 2026, 2027, 2028]).reshape(-1, 1)
+        predicted_depth = model_depth.predict(future_years)
+        predicted_severity = model_severity.predict(future_years)
+
+        # Combine the predictions with future years for visualization
+        future_data = pd.DataFrame({
+            'tahun': future_years.flatten(),
+            'indeks_kedalaman': predicted_depth,
+            'indeks_keparahan_kemiskinan': predicted_severity
+        })
+
+        # Combine past and predicted data for plotting
+        combined_data = pd.concat([avg_data, future_data])
+
+        # Create a figure for both historical data and predictions
+        fig = go.Figure()
+
+        # Add poverty depth index line (historical)
+        fig.add_trace(go.Scatter(
             x=avg_data['tahun'], y=avg_data['indeks_kedalaman'],
             mode='lines+markers+text',
-            name='Indeks Kedalaman',
+            name='Indeks Kedalaman (2005-2023)',
             text=avg_data['indeks_kedalaman'].round(2),
             textposition='top center',
             hovertemplate=(
@@ -241,37 +298,80 @@ elif page == "Indeks Kedalaman dan Keparahan Kemiskinan":
             customdata=avg_data[['indeks_keparahan_kemiskinan', 'perc_change_kedalaman']].values
         ))
 
-        # Add poverty severity index line
-        fig3.add_trace(go.Scatter(
+        # Add poverty severity index line (historical)
+        fig.add_trace(go.Scatter(
             x=avg_data['tahun'], y=avg_data['indeks_keparahan_kemiskinan'],
             mode='lines+markers+text',
-            name='Indeks Keparahan',
+            name='Indeks Keparahan (2005-2023)',
             text=avg_data['indeks_keparahan_kemiskinan'].round(2),
             textposition='top center',
             hovertemplate=(
                 'Tahun: %{x}<br>'
                 'Indeks Keparahan: %{y:.2f}<br>'
-                'Indeks Kedalaman: %{customdata[0]:.2f}<br>'
+                'Indeks Kedalaman: %{customdata[1]:.2f}<br>'
                 '<br>'
-                'Peningkatan Keparahan: %{customdata[1]:.2f}%<br>'
+                'Peningkatan Keparahan: %{customdata[0]:.2f}%<br>'
                 '<extra></extra>'
             ),
-            customdata=avg_data[['indeks_kedalaman', 'perc_change_keparahan']].values
+            customdata=avg_data[['indeks_keparahan_kemiskinan', 'perc_change_keparahan']].values
         ))
 
-        # Update layout to include titles and axis labels with larger size
-        fig3.update_layout(
-            title='Grafik Indeks Kedalaman dan Keparahan Kemiskinan',
+        # Add poverty depth index line (predictions)
+        fig.add_trace(go.Scatter(
+            x=future_data['tahun'], y=future_data['indeks_kedalaman'],
+            mode='lines+markers+text',
+            name='Indeks Kedalaman (Prediksi 2024-2028)',
+            text=future_data['indeks_kedalaman'].round(2),
+            textposition='top center',
+            hovertemplate=(
+                'Tahun: %{x}<br>'
+                'Indeks Kedalaman: %{y:.2f}<br>'
+                'Indeks Keparahan: %{customdata[0]:.2f}<br>'
+                '<extra></extra>'
+            ),
+            customdata=np.stack((future_data['indeks_keparahan_kemiskinan'], future_data['indeks_kedalaman']), axis=-1)
+        ))
+
+        # Add poverty severity index line (predictions)
+        fig.add_trace(go.Scatter(
+            x=future_data['tahun'], y=future_data['indeks_keparahan_kemiskinan'],
+            mode='lines+markers+text',
+            name='Indeks Keparahan (Prediksi 2024-2028)',
+            text=future_data['indeks_keparahan_kemiskinan'].round(2),
+            textposition='top center',
+            hovertemplate=(
+                'Tahun: %{x}<br>'
+                'Indeks Keparahan: %{y:.2f}<br>'
+                'Indeks Kedalaman: %{customdata[1]:.2f}<br>'
+                '<extra></extra>'
+            ),
+            customdata=np.stack((future_data['indeks_keparahan_kemiskinan'], future_data['indeks_kedalaman']), axis=-1)
+        ))
+
+        # Add a vertical line at the position 2023.5 to separate historical and predicted data
+        fig.add_shape(
+            dict(
+                type="line",
+                x0=2023.5,
+                y0=0,
+                x1=2023.5,
+                y1=max(combined_data['indeks_kedalaman'].max(), combined_data['indeks_keparahan_kemiskinan'].max()),
+                line=dict(color="Yellow", width=2, dash="dash"),
+            )
+        )
+
+        # Update layout to include titles and axis labels, with increased width
+        fig.update_layout(
+            title='Grafik Indeks Kedalaman dan Keparahan Kemiskinan (2005-2028)',
             xaxis_title='Tahun',
             yaxis_title='Nilai Indeks',
             legend_title_text='Indeks',
             height=500,
-            width=1500
+            width=1800  
         )
 
-        st.write("### Indeks Kedalaman dan Keparahan Kemiskinan Tahun (2005-2023)")
-        # Show the combined chart
-        st.plotly_chart(fig3)
+        st.write("### Indeks Kedalaman dan Keparahan Kemiskinan (2005-2028)")
+        st.plotly_chart(fig)
 
 
         st.write("""
